@@ -1,0 +1,52 @@
+[
+  {
+    "toolName": "Zapier",
+    "websiteUrl": "https://zapier.com/",
+    "tagline": "Automate your work and connect your apps with AI.",
+    "description": "Zapier is an automation platform that connects thousands of applications and allows users to automate repetitive tasks. Users can create workflows called Zaps that trigger actions between different applications. Zapier also provides AI-powered automation features, agents, chatbots, and tools for building more intelligent workflows.",
+    "categoryId": "automation",
+    "pricing": "Freemium",
+    "features": [
+      "Workflow automation",
+      "App integrations",
+      "AI automation",
+      "AI agents",
+      "Triggers and actions",
+      "Multi-step workflows",
+      "Webhooks",
+      "Filters and conditions",
+      "Scheduled automation",
+      "Data transformation",
+      "Task automation",
+      "Business process automation"
+    ],
+    "logoUrl": "https://zapier.com/",
+    "screenshots": [],
+    "technologies": [
+      "APIs",
+      "Webhooks",
+      "AI",
+      "LLM",
+      "REST",
+      "Cloud Computing",
+      "Automation"
+    ],
+    "tags": [
+      "Automation",
+      "AI Automation",
+      "No-Code",
+      "Workflow",
+      "AI Agents",
+      "API",
+      "Productivity"
+    ],
+    "submittedBy": "6abfd46e62a8b967c9608bd8",
+    "contactEmail": "admin@buildaihub.io",
+    "status": "approved",
+    "rejectionReason": "",
+    "_id": "6abfdcc562a8b967c9608d65",
+    "createdAt": "2026-10-02T16:33:09.330Z",
+    "updatedAt": "2026-10-02T16:33:09.398Z",
+    "__v": 0
+  }
+]

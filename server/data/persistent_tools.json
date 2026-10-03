@@ -1,0 +1,581 @@
+[
+  {
+    "id": "zapier",
+    "name": "Zapier",
+    "slug": "zapier",
+    "tagline": "Automate your work and connect your apps with AI.",
+    "creator": "Admin Chief",
+    "creatorBio": "Submitted by verified builder (admin@buildaihub.io).",
+    "description": "Zapier is an automation platform that connects thousands of applications and allows users to automate repetitive tasks. Users can create workflows called Zaps that trigger actions between different applications. Zapier also provides AI-powered automation features, agents, chatbots, and tools for building more intelligent workflows.",
+    "categoryId": "automation",
+    "categoryName": "Automation",
+    "pricing": "Freemium",
+    "pricingStartingAt": "Free plan available; paid plans vary by workflow usage and features.",
+    "rating": 5,
+    "reviewCount": 1,
+    "websiteUrl": "https://zapier.com/",
+    "featured": false,
+    "trending": true,
+    "launchYear": 2026,
+    "status": "approved",
+    "tags": [
+      "Automation",
+      "AI Automation",
+      "No-Code",
+      "Workflow",
+      "AI Agents",
+      "API",
+      "Productivity"
+    ],
+    "features": [
+      "Workflow automation",
+      "App integrations",
+      "AI automation",
+      "AI agents",
+      "Triggers and actions",
+      "Multi-step workflows",
+      "Webhooks",
+      "Filters and conditions",
+      "Scheduled automation",
+      "Data transformation",
+      "Task automation",
+      "Business process automation"
+    ],
+    "featureTags": [
+      "AI Generation",
+      "No-code"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "technologies": [
+      "APIs",
+      "Webhooks",
+      "AI",
+      "LLM",
+      "REST",
+      "Cloud Computing",
+      "Automation"
+    ],
+    "screenshots": [
+      {
+        "url": "https://zapier.com/",
+        "caption": "Zapier Interface",
+        "_id": "6abfdcc562a8b967c9608d67"
+      }
+    ],
+    "pros": [
+      "Innovative AI architecture",
+      "Modern developer experience",
+      "Quick onboarding"
+    ],
+    "cons": [
+      "Newly launched platform"
+    ],
+    "targetAudience": [
+      "Developers",
+      "Designers",
+      "Founders",
+      "Creators"
+    ],
+    "logoGradient": "from-blue-500 via-indigo-500 to-purple-600",
+    "exportOptions": [],
+    "comparisonSpecs": {
+      "priceStartingAt": "Free plan available; paid plans vary by workflow usage and features.",
+      "freePlanAvailable": true,
+      "hasAiGeneration": true,
+      "hasDatabase": false,
+      "hasAuth": false,
+      "hasCodeExport": true,
+      "hasApi": true,
+      "hostingIncluded": true,
+      "bestFor": "Automate your work and connect your apps with AI."
+    },
+    "viewsCount": 1,
+    "clicksCount": 0,
+    "favoritesCount": 0,
+    "_id": "6abfdcc562a8b967c9608d66",
+    "createdAt": "2026-10-02T16:33:09.368Z",
+    "updatedAt": "2026-10-02T16:33:09.368Z",
+    "__v": 0
+  },
+  {
+    "id": "hostinger-ai-website-builder",
+    "name": "Hostinger AI Website Builder",
+    "slug": "hostinger-ai-website-builder",
+    "tagline": "Describe your idea and let AI build your website.",
+    "creator": "Admin Chief",
+    "creatorBio": "Submitted by verified builder (admin@buildaihub.io).",
+    "description": "Hostinger AI Website Builder allows users to create websites by describing their idea to AI. It provides both an AI-assisted drag-and-drop building mode and an Agentic mode for conversational website and web-app development. The platform combines AI website creation with hosting, domains, SEO tools and business features",
+    "categoryId": "website-builders",
+    "categoryName": "Website Builders",
+    "pricing": "Paid",
+    "pricingStartingAt": "From ₹149/month on the current promotional Premium plan.",
+    "rating": 5,
+    "reviewCount": 1,
+    "websiteUrl": "https://www.hostinger.com/in/ai-website-builder",
+    "featured": false,
+    "trending": true,
+    "launchYear": 2026,
+    "status": "approved",
+    "tags": [
+      "AI Website Builder",
+      "Website Builder",
+      "AI Coding",
+      "No-Code",
+      "Ecommerce",
+      "Hosting",
+      "SEO",
+      "Web Apps"
+    ],
+    "features": [
+      "AI website generation",
+      "AI web app creation",
+      "Drag-and-drop editor",
+      "Agentic AI mode",
+      "AI content generation",
+      "AI image generation",
+      "Website-from-URL creation",
+      "Responsive websites",
+      "SEO tools",
+      "Ecommerce",
+      "Blog creation",
+      "Portfolio websites",
+      "Custom domains",
+      "Web hosting",
+      "Code editor and export",
+      "Third-party API integration",
+      "AI chatbot support"
+    ],
+    "featureTags": [
+      "AI Generation",
+      "No-code"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "technologies": [
+      "AI",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Web Development",
+      "APIs",
+      "Ecommerce",
+      "SEO",
+      "Cloud Hosting"
+    ],
+    "screenshots": [
+      {
+        "url": "https://www.hostinger.com/in/ai-website-builder?utm_source=chatgpt.com",
+        "caption": "Hostinger AI Website Builder Interface",
+        "_id": "6abfdb4262a8b967c9608d32"
+      }
+    ],
+    "pros": [
+      "Innovative AI architecture",
+      "Modern developer experience",
+      "Quick onboarding"
+    ],
+    "cons": [
+      "Newly launched platform"
+    ],
+    "targetAudience": [
+      "Developers",
+      "Designers",
+      "Founders",
+      "Creators"
+    ],
+    "logoGradient": "from-blue-500 via-indigo-500 to-purple-600",
+    "exportOptions": [],
+    "comparisonSpecs": {
+      "priceStartingAt": "From ₹149/month on the current promotional Premium plan.",
+      "freePlanAvailable": false,
+      "hasAiGeneration": true,
+      "hasDatabase": false,
+      "hasAuth": false,
+      "hasCodeExport": true,
+      "hasApi": true,
+      "hostingIncluded": true,
+      "bestFor": "Describe your idea and let AI build your website."
+    },
+    "viewsCount": 1,
+    "clicksCount": 0,
+    "favoritesCount": 0,
+    "_id": "6abfdb4262a8b967c9608d31",
+    "createdAt": "2026-10-02T16:26:42.167Z",
+    "updatedAt": "2026-10-02T16:26:42.167Z",
+    "__v": 0
+  },
+  {
+    "id": "webflow",
+    "name": "Webflow",
+    "slug": "webflow",
+    "tagline": "Build professional websites visually with AI-powered tools.",
+    "creator": "Community Submitter",
+    "creatorBio": "Submitted by verified builder (ayumsc203@gmail.com).",
+    "description": "Webflow is a professional visual website development platform that combines visual design, CMS functionality, hosting and AI-powered website-generation tools. Its AI site builder can generate a multi-page website from a description, including site structure, content and a visual theme. Users can then customize the generated website using Webflow's visual development environment.",
+    "categoryId": "website-builders",
+    "categoryName": "Website Builders",
+    "pricing": "Freemium",
+    "pricingStartingAt": "$0/month Free Starter plan; Basic Site plan starts at $15/month when billed yearly.",
+    "rating": 5,
+    "reviewCount": 1,
+    "websiteUrl": "https://webflow.com/",
+    "featured": false,
+    "trending": true,
+    "launchYear": 2026,
+    "status": "approved",
+    "tags": [
+      "AI Website Builder",
+      "Webflow",
+      "No-Code",
+      "UI/UX",
+      "CMS",
+      "Web Design",
+      "SEO",
+      "Developer Tools"
+    ],
+    "features": [
+      "AI website builder",
+      "Visual website development",
+      "Responsive design",
+      "CMS",
+      "SEO tools",
+      "AI-generated website sections",
+      "AI content generation",
+      "AI code components",
+      "Custom animations",
+      "Forms",
+      "Custom domains",
+      "Web hosting",
+      "Analytics",
+      "Localization",
+      "Code expor"
+    ],
+    "featureTags": [
+      "AI Generation",
+      "No-code"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "technologies": [
+      "AI",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "CMS",
+      "Web Development",
+      "APIs",
+      "Responsive Design"
+    ],
+    "screenshots": [
+      {
+        "url": "https://webflow.com/?utm_source=chatgpt.com",
+        "caption": "Webflow Interface",
+        "_id": "6abfd96462a8b967c9608c3d"
+      }
+    ],
+    "pros": [
+      "Innovative AI architecture",
+      "Modern developer experience",
+      "Quick onboarding"
+    ],
+    "cons": [
+      "Newly launched platform"
+    ],
+    "targetAudience": [
+      "Developers",
+      "Designers",
+      "Founders",
+      "Creators"
+    ],
+    "logoGradient": "from-blue-500 via-indigo-500 to-purple-600",
+    "exportOptions": [],
+    "comparisonSpecs": {
+      "priceStartingAt": "$0/month Free Starter plan; Basic Site plan starts at $15/month when billed yearly.",
+      "freePlanAvailable": true,
+      "hasAiGeneration": true,
+      "hasDatabase": false,
+      "hasAuth": false,
+      "hasCodeExport": true,
+      "hasApi": true,
+      "hostingIncluded": true,
+      "bestFor": "Build professional websites visually with AI-powered tools."
+    },
+    "viewsCount": 1,
+    "clicksCount": 0,
+    "favoritesCount": 0,
+    "_id": "6abfd96462a8b967c9608c3c",
+    "createdAt": "2026-10-02T16:18:44.510Z",
+    "updatedAt": "2026-10-02T16:18:44.510Z",
+    "__v": 0
+  },
+  {
+    "id": "bolt-new",
+    "name": "Bolt.new",
+    "slug": "bolt-new",
+    "tagline": "Turn your idea into a working website or app with A",
+    "creator": "Community Submitter",
+    "creatorBio": "Submitted by verified builder (ayumsc203@gmail.com).",
+    "description": "Bolt.new is an AI-powered website and application development platform. Users describe what they want to build in natural language, and Bolt generates the application code, interface, functionality, and project structure. Projects can be previewed and edited directly in the browser, and users can deploy their applications to a live URL. Bolt also supports databases, authentication, APIs, and full-stack applications",
+    "categoryId": "ai-coding",
+    "categoryName": "AI Coding",
+    "pricing": "Freemium",
+    "pricingStartingAt": "25",
+    "rating": 5,
+    "reviewCount": 1,
+    "websiteUrl": "https://bolt.new/",
+    "featured": false,
+    "trending": true,
+    "launchYear": 2026,
+    "status": "approved",
+    "tags": [
+      "AI Coding",
+      "Website Builder",
+      "App Builder",
+      "No-Code",
+      "Full-Stack",
+      "Developer Tools",
+      "Database",
+      "SaaS"
+    ],
+    "features": [
+      "AI website generation",
+      "AI app development",
+      "Natural-language coding",
+      "Browser-based code editor",
+      "Live preview",
+      "Full-stack application development",
+      "Database support",
+      "Authentication",
+      "API integration",
+      "Responsive design",
+      "One-click deployment",
+      "Custom domains",
+      "Built-in hosting"
+    ],
+    "featureTags": [
+      "AI Generation",
+      "No-code"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "technologies": [
+      "AI",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Web Development",
+      "APIs",
+      "Databases",
+      "Full-Stack Development"
+    ],
+    "screenshots": [
+      {
+        "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+        "caption": "Bolt.new Dashboard",
+        "_id": "6abf725f522ce32b2dd79e0a"
+      }
+    ],
+    "pros": [
+      "Innovative AI architecture",
+      "Modern developer experience",
+      "Quick onboarding"
+    ],
+    "cons": [
+      "Newly launched platform"
+    ],
+    "targetAudience": [
+      "Developers",
+      "Designers",
+      "Founders",
+      "Creators"
+    ],
+    "logoGradient": "from-blue-500 via-indigo-500 to-purple-600",
+    "exportOptions": [],
+    "comparisonSpecs": {
+      "priceStartingAt": "25",
+      "freePlanAvailable": true,
+      "hasAiGeneration": true,
+      "hasDatabase": false,
+      "hasAuth": false,
+      "hasCodeExport": true,
+      "hasApi": true,
+      "hostingIncluded": true,
+      "bestFor": "Turn your idea into a working website or app with A"
+    },
+    "viewsCount": 1,
+    "clicksCount": 0,
+    "favoritesCount": 0,
+    "_id": "6abf725f522ce32b2dd79e09",
+    "createdAt": "2026-10-02T08:59:11.595Z",
+    "updatedAt": "2026-10-02T08:59:11.595Z",
+    "__v": 0
+  },
+  {
+    "id": "n8n",
+    "name": "n8n",
+    "slug": "n8n",
+    "tagline": "AI agents and workflows you can see and control",
+    "creator": "Community Submitter",
+    "creatorBio": "Submitted by verified builder (ayumsc203@gmail.com).",
+    "description": "n8n workflow automation cheat sheet with nodes, expressions, triggers, code patterns, error handling, and self-hosting deployment tips.The power of flexible AI workflows, fine-tuned for enterprise production\nScale without breaking things. Collaborate without the mess. Meet strict compliance standards. Join 34% of Fortune 500 companies already using n8n’s advanced security and DevOps features to build & monitor business-critical AI workflows.",
+    "categoryId": "automation",
+    "categoryName": "Automation",
+    "pricing": "Freemium",
+    "pricingStartingAt": "25",
+    "rating": 5,
+    "reviewCount": 1,
+    "websiteUrl": "https://n8n.io/",
+    "featured": false,
+    "trending": true,
+    "launchYear": 2026,
+    "status": "approved",
+    "tags": [
+      "AI",
+      "Automation",
+      "New"
+    ],
+    "features": [
+      "AI-Powered Generation",
+      "Modern Web Engine",
+      "Instant Deployment"
+    ],
+    "featureTags": [
+      "AI Generation",
+      "No-code"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "technologies": [
+      "Web",
+      "Cloud API"
+    ],
+    "screenshots": [
+      {
+        "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+        "caption": "n8n Dashboard",
+        "_id": "6abf70a4522ce32b2dd79d67"
+      }
+    ],
+    "pros": [
+      "Innovative AI architecture",
+      "Modern developer experience",
+      "Quick onboarding"
+    ],
+    "cons": [
+      "Newly launched platform"
+    ],
+    "targetAudience": [
+      "Developers",
+      "Designers",
+      "Founders",
+      "Creators"
+    ],
+    "logoGradient": "from-blue-500 via-indigo-500 to-purple-600",
+    "exportOptions": [],
+    "comparisonSpecs": {
+      "priceStartingAt": "25",
+      "freePlanAvailable": true,
+      "hasAiGeneration": true,
+      "hasDatabase": false,
+      "hasAuth": false,
+      "hasCodeExport": true,
+      "hasApi": true,
+      "hostingIncluded": true,
+      "bestFor": "AI agents and workflows you can see and control"
+    },
+    "viewsCount": 1,
+    "clicksCount": 0,
+    "favoritesCount": 0,
+    "_id": "6abf70a4522ce32b2dd79d66",
+    "createdAt": "2026-10-02T08:51:48.539Z",
+    "updatedAt": "2026-10-02T08:51:48.539Z",
+    "__v": 0
+  },
+  {
+    "id": "superbuilder-ai",
+    "name": "SuperBuilder AI",
+    "slug": "superbuilder-ai",
+    "tagline": "Build full-stack AI web apps in minutes",
+    "creator": "Community Submitter",
+    "creatorBio": "Submitted by verified builder (founder@superbuilder.ai).",
+    "description": "A powerful AI builder that generates frontend and backend code with instant deployment.",
+    "categoryId": "ai-coding",
+    "categoryName": "AI Coding",
+    "pricing": "Freemium",
+    "pricingStartingAt": "$19/mo",
+    "rating": 5,
+    "reviewCount": 1,
+    "websiteUrl": "https://superbuilder.ai",
+    "featured": false,
+    "trending": true,
+    "launchYear": 2026,
+    "status": "approved",
+    "tags": [
+      "AI",
+      "AI Coding",
+      "New"
+    ],
+    "features": [
+      "AI Code Generation",
+      "Instant Deployment"
+    ],
+    "featureTags": [
+      "AI Generation",
+      "No-code"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "technologies": [
+      "Web",
+      "Cloud API"
+    ],
+    "screenshots": [
+      {
+        "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+        "caption": "SuperBuilder AI Dashboard",
+        "_id": "6abf6f61522ce32b2dd79d05"
+      }
+    ],
+    "pros": [
+      "Innovative AI architecture",
+      "Modern developer experience",
+      "Quick onboarding"
+    ],
+    "cons": [
+      "Newly launched platform"
+    ],
+    "targetAudience": [
+      "Developers",
+      "Designers",
+      "Founders",
+      "Creators"
+    ],
+    "logoGradient": "from-blue-500 via-indigo-500 to-purple-600",
+    "exportOptions": [],
+    "comparisonSpecs": {
+      "priceStartingAt": "$19/mo",
+      "freePlanAvailable": true,
+      "hasAiGeneration": true,
+      "hasDatabase": false,
+      "hasAuth": false,
+      "hasCodeExport": true,
+      "hasApi": true,
+      "hostingIncluded": true,
+      "bestFor": "Build full-stack AI web apps in minutes"
+    },
+    "viewsCount": 1,
+    "clicksCount": 0,
+    "favoritesCount": 0,
+    "_id": "6abf6f61522ce32b2dd79d04",
+    "createdAt": "2026-10-02T08:46:25.623Z",
+    "updatedAt": "2026-10-02T08:46:25.623Z",
+    "__v": 0
+  }
+]

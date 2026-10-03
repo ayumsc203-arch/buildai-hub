@@ -1,0 +1,1503 @@
+/* ==========================================================================
+   NAYAK K. V. SINDHA — INDIAN ARMY HERITAGE SCRAPBOOK
+   Pixel-Accurate 1:1 Recreation of Reference Mockup
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. COLOR PALETTE & TYPOGRAPHY VARIABLES
+   -------------------------------------------------------------------------- */
+:root {
+  /* Colors from specifications & reference */
+  --c-army-green: #26351F;
+  --c-army-green-hover: #324529;
+  --c-khaki: #B8A77A;
+  --c-khaki-light: #D4C69E;
+  --c-khaki-dark: #8F7F55;
+  --c-parchment: #E8D8B8;
+  --c-parchment-light: #F4EAD4;
+  --c-parchment-card: #E5D5B5;
+  --c-parchment-dark: #CBB790;
+  --c-brown: #3E2F1C;
+  --c-brown-dark: #2A1F13;
+  --c-rust: #8B3F2F;
+  --c-rust-dark: #6C2E20;
+  --c-charcoal: #1F1F1A;
+  --c-charcoal-nav: #161512;
+
+  /* Subtle Tricolor */
+  --c-saffron: #FF9933;
+  --c-white: #FFFFFF;
+  --c-green: #138808;
+
+  /* Fonts */
+  --font-hero: 'UnifrakturCook', cursive, Georgia, serif;
+  --font-heading: 'Bebas Neue', 'Impact', sans-serif;
+  --font-subtitle: 'Cormorant Garamond', Garamond, serif;
+  --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label: 'Special Elite', 'Courier New', monospace;
+  --font-quote: 'Caveat', cursive;
+  --font-nav: 'Montserrat', sans-serif;
+
+  /* Smooth Transitions */
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: 0.22s var(--ease-smooth);
+  --transition-normal: 0.35s var(--ease-smooth);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.scrapbook-page {
+  background-color: #382A1B;
+  background-image: 
+    radial-gradient(circle at 50% 30%, rgba(214, 194, 155, 0.2) 0%, rgba(30, 20, 10, 0.8) 100%),
+    linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+  color: var(--c-charcoal);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. MAIN SCRAPBOOK CANVAS (POSTER CONTAINER)
+   -------------------------------------------------------------------------- */
+.scrapbook-canvas {
+  width: 100%;
+  max-width: 1080px;
+  background-color: #D6C29E;
+  background-image: 
+    url('assets/images/parchment-map-tile.jpg'),
+    radial-gradient(circle at 50% 40%, rgba(244, 234, 212, 0.4) 0%, rgba(184, 160, 118, 0.6) 100%);
+  background-repeat: repeat;
+  background-size: 320px 320px, 100% 100%;
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.7),
+    0 5px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* Subtle Topographic Overlay */
+.scrapbook-canvas::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%233E2F1C' stroke-width='0.8'%3E%3Cpath d='M-50,80 C100,40 180,200 450,120'/%3E%3Cpath d='M-50,130 C90,80 200,240 450,180'/%3E%3Cpath d='M-50,180 C120,120 220,290 450,240'/%3E%3Ccircle cx='340' cy='120' r='60' stroke-dasharray='3,4'/%3E%3Ccircle cx='80' cy='320' r='70' stroke-dasharray='2,3'/%3E%3C/g%3E%3C/svg%3E");
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   3. TOP NAVIGATION BAR (EXACT MATCH TO REFERENCE)
+   -------------------------------------------------------------------------- */
+.scrapbook-navbar {
+  position: relative;
+  background: var(--c-charcoal-nav);
+  border-bottom: 2px solid var(--c-khaki-dark);
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 2rem;
+}
+
+/* Brand */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.emblem-crossed-swords {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.brand-swords-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5));
+}
+
+.brand-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  line-height: 1.05;
+  letter-spacing: 2px;
+  color: #E8D8B8;
+}
+
+.brand-sub {
+  font-family: var(--font-label);
+  font-size: 0.58rem;
+  letter-spacing: 1.8px;
+  color: var(--c-khaki);
+  text-transform: uppercase;
+}
+
+/* Desktop Menu Links */
+.nav-menu .nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.nav-item {
+  font-family: var(--font-nav);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #DDD2B8;
+  text-decoration: none;
+  padding: 0.35rem 0;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: #FFFFFF;
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--c-khaki);
+}
+
+/* Right Nav Controls */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-flag-badge {
+  width: 22px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.flag-stripe {
+  height: 33.33%;
+}
+.flag-stripe.saffron { background: var(--c-saffron); }
+.flag-stripe.white { 
+  background: var(--c-white); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+.flag-stripe.green { background: var(--c-green); }
+
+.mini-chakra {
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 50%;
+  border: 0.5px solid #000080;
+}
+
+.nav-search-btn {
+  background: none;
+  border: none;
+  color: #DDD2B8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.nav-search-btn:hover {
+  color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.mobile-toggle span {
+  width: 20px;
+  height: 2px;
+  background: var(--c-khaki);
+  border-radius: 2px;
+}
+
+.mobile-nav-panel {
+  display: none;
+  background: var(--c-charcoal-nav);
+  border-top: 1px solid rgba(184, 167, 122, 0.2);
+  padding: 1rem 2rem;
+}
+
+.mobile-nav-panel.open {
+  display: block;
+}
+
+.mobile-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mob-link {
+  font-family: var(--font-nav);
+  font-size: 0.85rem;
+  color: var(--c-parchment);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   4. HERO SECTION (1:1 ACCURATE RECREATION OF REFERENCE)
+   -------------------------------------------------------------------------- */
+.scrapbook-hero {
+  position: relative;
+  padding: 2.25rem 2rem 2rem;
+  z-index: 2;
+}
+
+/* Top Right Cluster: Handwritten Note + Compass + Postal Stamp */
+.hero-top-right-cluster {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  z-index: 10;
+}
+
+/* Handwritten Note: "Service Before Self" */
+.top-quote-scrap {
+  background: #F4E8D0;
+  padding: 1rem 1.4rem 0.85rem;
+  border-radius: 2px;
+  box-shadow: 2px 4px 12px rgba(40, 25, 10, 0.28);
+  transform: rotate(3.5deg);
+  border: 1px solid rgba(62, 47, 28, 0.2);
+  max-width: 175px;
+  text-align: center;
+  transition: transform var(--transition-normal);
+}
+
+.top-quote-scrap:hover {
+  transform: rotate(1deg) scale(1.03);
+}
+
+.tq-quote {
+  font-family: var(--font-quote);
+  font-size: 1.65rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--c-charcoal);
+}
+
+.tq-sub {
+  font-family: var(--font-quote);
+  font-size: 1.15rem;
+  color: var(--c-rust);
+  text-align: right;
+  margin-top: 0.2rem;
+}
+
+/* Antique Brass Compass */
+.compass-wrap {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(62, 47, 28, 0.3);
+  transition: transform var(--transition-normal);
+}
+
+.compass-wrap:hover {
+  transform: rotate(15deg) scale(1.05);
+}
+
+.antique-compass-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Faded Postal Seal */
+.faded-postal-seal {
+  position: absolute;
+  top: 92px;
+  right: 20px;
+  width: 88px;
+  height: 88px;
+  border: 1.5px dashed rgba(110, 80, 50, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.seal-inner-circle {
+  width: 72px;
+  height: 72px;
+  border: 1px solid rgba(110, 80, 50, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seal-text-arch {
+  font-family: var(--font-label);
+  font-size: 0.45rem;
+  color: var(--c-rust-dark);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Mid-Right: Soldiers Raising Flag on Mountain Peak */
+.hero-mid-right-soldiers {
+  position: absolute;
+  top: 15rem;
+  right: 1.5rem;
+  width: 195px;
+  z-index: 5;
+  filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.35));
+  transition: transform var(--transition-normal);
+}
+
+.hero-mid-right-soldiers:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.soldiers-ridge-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  mask-image: linear-gradient(to top, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 85%, transparent 100%);
+}
+
+/* Hero Core Row: Left Photo + Center Scroll */
+.hero-core-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 4;
+}
+
+/* LEFT: Vintage Framed Photo */
+.hero-left-photo-block {
+  width: 250px;
+  flex-shrink: 0;
+  margin-top: 1rem;
+}
+
+.vintage-framed-photo {
+  position: relative;
+  background: #F4EAD4;
+  padding: 12px 12px 18px;
+  border-radius: 2px;
+  box-shadow: 
+    3px 6px 20px rgba(35, 20, 10, 0.35),
+    0 1px 3px rgba(0, 0, 0, 0.2);
+  transform: rotate(-3.5deg);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  border: 1px solid rgba(62, 47, 28, 0.25);
+  cursor: pointer;
+}
+
+.vintage-framed-photo:hover {
+  transform: rotate(0deg) translateY(-5px);
+  box-shadow: 5px 12px 30px rgba(35, 20, 10, 0.45);
+}
+
+.photo-inner-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(62, 47, 28, 0.35);
+  border-radius: 1px;
+  background: #1F1F1A;
+}
+
+.portrait-photo-img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  filter: contrast(105%) brightness(98%);
+  transition: filter var(--transition-fast);
+}
+
+.vintage-framed-photo:hover .portrait-photo-img {
+  filter: contrast(108%) brightness(100%);
+}
+
+/* Silver Paperclip on Top Left of Photo */
+.scrapbook-paperclip {
+  position: absolute;
+  width: 14px;
+  height: 38px;
+  border: 2.5px solid #D8D8D8;
+  border-radius: 8px;
+  z-index: 20;
+  pointer-events: none;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.scrapbook-paperclip::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  width: 6px;
+  height: 20px;
+  border: 2px solid #EEEEEE;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.clip-top-left {
+  top: -14px;
+  left: 22px;
+}
+
+/* Angled Handwritten Note below Photo */
+.photo-tilted-note {
+  position: absolute;
+  bottom: -22px;
+  left: -15px;
+  background: #EFE4CC;
+  padding: 0.65rem 1rem;
+  border-radius: 2px;
+  box-shadow: 2px 4px 10px rgba(30, 20, 10, 0.28);
+  transform: rotate(5deg);
+  border: 1px solid rgba(62, 47, 28, 0.2);
+  z-index: 15;
+  max-width: 165px;
+}
+
+.tilted-note-script {
+  font-family: var(--font-quote);
+  font-size: 1.35rem;
+  line-height: 1.15;
+  color: var(--c-charcoal);
+  font-weight: 600;
+}
+
+/* CENTER: Torn Parchment Scroll */
+.hero-center-scroll-block {
+  flex: 1;
+  max-width: 530px;
+  margin-top: 0.5rem;
+}
+
+.torn-parchment-scroll {
+  position: relative;
+  background: #F4EAD4;
+  background-image: 
+    radial-gradient(ellipse at 70% 30%, rgba(255,255,255,0.45) 0%, transparent 70%),
+    linear-gradient(to bottom, #F7EEDB 0%, #EBDBC1 100%);
+  padding: 2.25rem 2.5rem 2.25rem;
+  border-radius: 4px;
+  box-shadow: 
+    0 12px 30px rgba(35, 20, 10, 0.28),
+    0 2px 6px rgba(0, 0, 0, 0.15),
+    inset 0 0 45px rgba(184, 167, 122, 0.35);
+  border: 1.5px solid rgba(139, 63, 47, 0.3);
+  text-align: center;
+  transform: rotate(-0.5deg);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.torn-parchment-scroll:hover {
+  transform: rotate(0deg);
+  box-shadow: 0 16px 36px rgba(35, 20, 10, 0.35);
+}
+
+.scroll-eyebrow {
+  font-family: var(--font-subtitle);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--c-brown);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+/* Gothic Blackletter Heading (UnifrakturCook) */
+.scroll-hero-title {
+  font-family: var(--font-hero);
+  font-size: 4.5rem;
+  line-height: 0.98;
+  color: var(--c-charcoal);
+  margin-bottom: 0.85rem;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5), 2px 3px 2px rgba(62, 47, 28, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.title-line-1 {
+  display: block;
+}
+.title-line-2 {
+  display: block;
+}
+
+/* Subtitle Row with Tricolor Bars */
+.scroll-subtitle-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.scroll-hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  letter-spacing: 4px;
+  color: var(--c-army-green);
+  line-height: 1;
+}
+
+.tricolor-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 38px;
+}
+
+.tricolor-bar span {
+  height: 2.5px;
+  border-radius: 1px;
+}
+.tb-saffron { background: var(--c-saffron); }
+.tb-white { background: var(--c-white); border: 0.5px solid rgba(0,0,0,0.15); }
+.tb-green { background: var(--c-green); }
+
+.scroll-description {
+  font-family: var(--font-subtitle);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--c-brown-dark);
+  margin-bottom: 1.5rem;
+}
+
+/* Army Green CTA Button */
+.scroll-cta-row {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-explore-journey {
+  background: var(--c-army-green);
+  background-image: linear-gradient(180deg, #2E3F26 0%, #1E2B18 100%);
+  color: #E8D8B8;
+  font-family: var(--font-nav);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  padding: 0.85rem 1.85rem;
+  border-radius: 25px;
+  border: 1.5px solid var(--c-khaki);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 12px rgba(20, 30, 15, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-explore-journey:hover {
+  background: var(--c-army-green-hover);
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(20, 30, 15, 0.55);
+}
+
+.btn-explore-journey .btn-arrow {
+  font-size: 1.2rem;
+  transition: transform var(--transition-fast);
+}
+
+.btn-explore-journey:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   5. EXPLORE "HIS JOURNEY" HEADER (EXACT MATCH)
+   -------------------------------------------------------------------------- */
+.explore-header-section {
+  position: relative;
+  text-align: center;
+  padding: 2rem 2rem 1.5rem;
+  z-index: 2;
+}
+
+.explore-header-box {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.explore-eyebrow {
+  font-family: var(--font-subtitle);
+  font-size: 1.15rem;
+  letter-spacing: 5px;
+  color: var(--c-brown);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.explore-main-title {
+  font-family: var(--font-hero);
+  font-size: 4.2rem;
+  line-height: 1.05;
+  color: var(--c-charcoal);
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.4);
+}
+
+.explore-subtext {
+  font-family: var(--font-subtitle);
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--c-brown-dark);
+  line-height: 1.45;
+}
+
+.journey-stamp-watermark {
+  position: absolute;
+  top: 1rem;
+  right: 2.5rem;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.faded-roundel {
+  width: 90px;
+  height: 90px;
+  border: 1.5px dashed rgba(110, 80, 50, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-15deg);
+}
+
+.faded-roundel span {
+  font-family: var(--font-label);
+  font-size: 0.5rem;
+  color: var(--c-rust-dark);
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------
+   6. THE 12 ARCHIVAL SCRAPBOOK CARDS (EXACT MATCH: 3 ROWS x 4 COLS)
+   -------------------------------------------------------------------------- */
+.milestone-cards-section {
+  position: relative;
+  padding: 1rem 2.25rem 3.5rem;
+  z-index: 2;
+}
+
+.cards-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.85rem 1.6rem;
+}
+
+/* Card Base */
+.scrapbook-card {
+  position: relative;
+  background: #F4EAD4;
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.4) 0%, transparent 60%),
+    linear-gradient(to bottom, #F7EEDB 0%, #E7D7BD 100%);
+  padding: 1.5rem 1.25rem 1.15rem;
+  border-radius: 2px;
+  border: 1px solid rgba(62, 47, 28, 0.22);
+  box-shadow: 
+    0 4px 12px rgba(35, 20, 10, 0.18),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 185px;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), background-color var(--transition-fast);
+}
+
+.scrapbook-card:hover {
+  transform: translateY(-6px) scale(1.02) !important;
+  box-shadow: 
+    0 14px 28px rgba(35, 20, 10, 0.26),
+    0 3px 8px rgba(0, 0, 0, 0.12);
+  background-color: #FAF4E8;
+  border-color: rgba(62, 47, 28, 0.4);
+}
+
+/* Icon Slot at Top Right */
+.card-icon-slot {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 32px;
+  height: 32px;
+  color: var(--c-charcoal);
+  opacity: 0.85;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.card-svg-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.scrapbook-card:hover .card-icon-slot {
+  transform: scale(1.1);
+  color: var(--c-army-green);
+}
+
+/* Card Body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-num {
+  font-family: var(--font-label);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--c-charcoal);
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.card-heading {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  line-height: 1.1;
+  color: var(--c-charcoal);
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  padding-right: 2.2rem; /* Avoid overlapping icon */
+}
+
+.card-desc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.35;
+  color: #3F3325;
+  margin-bottom: 0.85rem;
+  flex-grow: 1;
+}
+
+.card-bottom-arrow {
+  align-self: flex-end;
+  font-size: 1.2rem;
+  color: var(--c-charcoal);
+  opacity: 0.7;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.scrapbook-card:hover .card-bottom-arrow {
+  transform: translateX(4px);
+  opacity: 1;
+  color: var(--c-rust);
+}
+
+/* --------------------------------------------------------------------------
+   CARD FASTENERS (EXACT MATCH TO REFERENCE MOCKUP):
+   - Card 01: Paperclip top-left
+   - Card 02: Red pushpin top-center
+   - Card 03: None
+   - Card 04: Paperclip top-right
+   - Card 05: Tape top-left
+   - Card 06: None
+   - Card 07: Red pushpin top-center
+   - Card 08: Tape top-right
+   - Card 09: Paperclip top-right
+   - Card 10: Tape top-center
+   - Card 11: Paperclip top-right
+   - Card 12: Red pushpin top-right
+   -------------------------------------------------------------------------- */
+
+/* Paperclip */
+.card-fastener-clip {
+  position: absolute;
+  width: 14px;
+  height: 38px;
+  border: 2.5px solid #D2D2D2;
+  border-radius: 8px;
+  top: -14px;
+  left: 20px;
+  z-index: 10;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.card-fastener-clip::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  width: 6px;
+  height: 20px;
+  border: 2px solid #EEEEEE;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.card-fastener-clip.clip-right {
+  left: auto;
+  right: 20px;
+}
+
+/* 3D Red Pushpin */
+.card-fastener-pin {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #FF7373 0%, #D32F2F 50%, #750F11 100%);
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.45);
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.card-fastener-pin::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.card-fastener-pin.pin-right {
+  left: auto;
+  right: 24px;
+  transform: none;
+}
+
+/* Masking Tape */
+.card-fastener-tape {
+  position: absolute;
+  background: rgba(228, 212, 172, 0.72);
+  border-left: 2px dashed rgba(184, 167, 122, 0.4);
+  border-right: 2px dashed rgba(184, 167, 122, 0.4);
+  height: 18px;
+  width: 75px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.card-fastener-tape.tape-left {
+  top: -8px;
+  left: 15px;
+  transform: rotate(-3deg);
+}
+
+.card-fastener-tape.tape-right {
+  top: -8px;
+  right: 15px;
+  transform: rotate(3deg);
+}
+
+.card-fastener-tape.tape-center {
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(0.5deg);
+}
+
+/* Subtle Organic Card Tilts */
+.cards-grid-wrapper article:nth-child(1) { transform: rotate(-0.5deg); }
+.cards-grid-wrapper article:nth-child(2) { transform: rotate(0.6deg); }
+.cards-grid-wrapper article:nth-child(3) { transform: rotate(-0.4deg); }
+.cards-grid-wrapper article:nth-child(4) { transform: rotate(0.5deg); }
+.cards-grid-wrapper article:nth-child(5) { transform: rotate(0.4deg); }
+.cards-grid-wrapper article:nth-child(6) { transform: rotate(-0.6deg); }
+.cards-grid-wrapper article:nth-child(7) { transform: rotate(0.3deg); }
+.cards-grid-wrapper article:nth-child(8) { transform: rotate(-0.5deg); }
+.cards-grid-wrapper article:nth-child(9) { transform: rotate(-0.4deg); }
+.cards-grid-wrapper article:nth-child(10) { transform: rotate(0.5deg); }
+.cards-grid-wrapper article:nth-child(11) { transform: rotate(-0.3deg); }
+.cards-grid-wrapper article:nth-child(12) { transform: rotate(0.6deg); }
+
+/* --------------------------------------------------------------------------
+   7. BOTTOM LEGACY BANNER (EXACT MATCH TO REFERENCE MOCKUP)
+   -------------------------------------------------------------------------- */
+.legacy-footer-banner {
+  position: relative;
+  background-color: #1A1A15;
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.85) 100%);
+  border-top: 2px solid var(--c-khaki-dark);
+  padding: 2.25rem 2.25rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  overflow: hidden;
+  z-index: 5;
+}
+
+/* Left: Handwritten Quote Card */
+.banner-quote-card {
+  position: relative;
+  background: #F4EAD4;
+  padding: 1.25rem 1.4rem;
+  border-radius: 2px;
+  box-shadow: 2px 6px 18px rgba(0, 0, 0, 0.5);
+  transform: rotate(-2.5deg);
+  border: 1px solid rgba(62, 47, 28, 0.25);
+  max-width: 250px;
+  flex-shrink: 0;
+  transition: transform var(--transition-normal);
+}
+
+.banner-quote-card:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.quote-tape-accent {
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  width: 60px;
+  height: 18px;
+  background: rgba(228, 212, 172, 0.75);
+  border-left: 2px dashed rgba(184, 167, 122, 0.4);
+  border-right: 2px dashed rgba(184, 167, 122, 0.4);
+  transform: rotate(-3deg);
+}
+
+.banner-handwritten-quote {
+  font-family: var(--font-quote);
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--c-charcoal);
+  margin-bottom: 0.35rem;
+}
+
+.banner-quote-author {
+  font-family: var(--font-quote);
+  font-size: 1.2rem;
+  color: var(--c-rust);
+  display: block;
+  text-align: right;
+}
+
+/* Center: Legacy Typography */
+.banner-center-text {
+  text-align: center;
+  flex: 1;
+}
+
+.banner-eyebrow {
+  font-family: var(--font-subtitle);
+  font-size: 1.05rem;
+  letter-spacing: 4px;
+  color: var(--c-khaki);
+  margin-bottom: 0.2rem;
+}
+
+.banner-hero-heading {
+  font-family: var(--font-hero);
+  font-size: 3.4rem;
+  line-height: 1.05;
+  color: #FFFFFF;
+  margin-bottom: 0.35rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.banner-subtext {
+  font-family: var(--font-subtitle);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #D3BF9B;
+  line-height: 1.4;
+}
+
+/* Right: Mountain Sunset Soldier Silhouette */
+.banner-soldier-silhouette {
+  width: 210px;
+  height: 140px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+}
+
+.soldier-sunset-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   8. INTERACTIVE ARCHIVAL DOSSIER MODAL (<dialog>)
+   -------------------------------------------------------------------------- */
+.archival-dossier-modal {
+  border: none;
+  background: transparent;
+  padding: 0;
+  max-width: 760px;
+  width: 90%;
+  margin: auto;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  border-radius: 4px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
+}
+
+.archival-dossier-modal::backdrop {
+  background: rgba(18, 16, 12, 0.88);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.modal-parchment-sheet {
+  position: relative;
+  background: #F4EAD4;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4) 0%, rgba(211, 191, 155, 0.3) 100%),
+    linear-gradient(to bottom, #FAF3E6 0%, #E8D8B8 100%);
+  padding: 2.5rem 2.5rem 2rem;
+  border-radius: 4px;
+  border: 1.5px solid rgba(62, 47, 28, 0.35);
+  box-shadow: inset 0 0 30px rgba(184, 167, 122, 0.4);
+}
+
+.clip-modal-left {
+  top: -16px;
+  left: 30px;
+}
+
+.scrapbook-pushpin {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #FF7373 0%, #D32F2F 50%, #750F11 100%);
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.45);
+  z-index: 20;
+}
+
+.pin-modal-top {
+  top: -8px;
+  right: 50px;
+}
+
+.modal-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1.5px solid var(--c-khaki-dark);
+  margin-bottom: 1.25rem;
+}
+
+.modal-stamps {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.m-stamp {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  letter-spacing: 1.2px;
+  padding: 0.25rem 0.65rem;
+  border-radius: 2px;
+  font-weight: bold;
+}
+.m-stamp.green { background: var(--c-army-green); color: #FFF; }
+.m-stamp.red { background: var(--c-rust); color: #FFF; }
+
+.modal-close-x {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--c-charcoal);
+  cursor: pointer;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.modal-close-x:hover {
+  color: var(--c-rust);
+  transform: scale(1.15);
+}
+
+.modal-meta-line {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  color: var(--c-rust);
+  letter-spacing: 1px;
+  margin-bottom: 0.35rem;
+}
+
+.modal-main-title {
+  font-family: var(--font-hero);
+  font-size: 2.8rem;
+  line-height: 1.1;
+  color: var(--c-charcoal);
+  margin-bottom: 0.25rem;
+}
+
+.modal-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  letter-spacing: 2px;
+  color: var(--c-army-green);
+  margin-bottom: 1rem;
+}
+
+.modal-quote-strip {
+  background: rgba(255, 255, 255, 0.55);
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--c-rust);
+  margin-bottom: 1.25rem;
+}
+
+.modal-quote-text {
+  font-family: var(--font-quote);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--c-charcoal);
+}
+
+.modal-desc-body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #2D2318;
+  margin-bottom: 1.25rem;
+}
+
+.modal-points-heading {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  color: var(--c-rust);
+  margin-bottom: 0.4rem;
+}
+
+.modal-points-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.modal-points-list li {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--c-charcoal);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.modal-points-list li::before {
+  content: '★';
+  color: var(--c-rust);
+  font-size: 0.75rem;
+  margin-top: 3px;
+}
+
+.modal-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(62, 47, 28, 0.25);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.modal-meta-tag {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  color: var(--c-brown);
+}
+
+.modal-close-btn {
+  background: var(--c-army-green);
+  color: #FFF;
+  border: 1px solid var(--c-khaki);
+  padding: 0.55rem 1.35rem;
+  border-radius: 2px;
+  font-family: var(--font-nav);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  background: var(--c-army-green-hover);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   9. FULLSCREEN PHOTO GALLERY LIGHTBOX
+   -------------------------------------------------------------------------- */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(14, 13, 10, 0.95);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.gallery-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lb-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: #E8D8B8;
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.lb-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(38, 53, 31, 0.8);
+  border: 1px solid var(--c-khaki);
+  color: #FFF;
+  font-size: 1.6rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.lb-nav.prev { left: 2rem; }
+.lb-nav.next { right: 2rem; }
+.lb-nav:hover { background: var(--c-army-green); transform: translateY(-50%) scale(1.1); }
+
+.lb-wrapper {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.lb-image-frame {
+  max-height: 72vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--c-khaki);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+  background: #000;
+}
+
+.lb-img-display {
+  max-height: 70vh;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.lb-caption-box {
+  margin-top: 1rem;
+  color: #E8D8B8;
+}
+
+.lb-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.lb-desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #CBB790;
+}
+
+.lb-counter {
+  display: block;
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  color: var(--c-rust);
+  margin-top: 0.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. RESPONSIVE MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .hero-core-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hero-left-photo-block {
+    margin-top: 2rem;
+  }
+
+  .cards-grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .hero-mid-right-soldiers {
+    top: 26rem;
+    width: 150px;
+    opacity: 0.7;
+  }
+
+  .legacy-footer-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-quote-card {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .hero-top-right-cluster {
+    position: static;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-mid-right-soldiers {
+    display: none;
+  }
+
+  .cards-grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .scroll-hero-title {
+    font-size: 3.4rem;
+  }
+
+  .explore-main-title {
+    font-size: 3.2rem;
+  }
+
+  .banner-hero-heading {
+    font-size: 2.6rem;
+  }
+
+  .modal-parchment-sheet {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .modal-main-title {
+    font-size: 2.2rem;
+  }
+
+  .lb-nav {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+  .lb-nav.prev { left: 0.5rem; }
+  .lb-nav.next { right: 0.5rem; }
+}
